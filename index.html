@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Michroma&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Spline+Sans:wght@300..700&family=Young+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="display">
+        <img src="./image/logo.svg" alt="adidas logo" class="logo">
+        <p>Search our Product</p>
+        <div class="label" id="labelContainer">
+            <input id="searchInput" placeholder="Search our product here">
+            <button id="searchButton">Search</button>
+            <img id="searchIcon" src="./image/search.svg" alt="Search Icon">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("searchIcon").addEventListener("click", function() {
+            let label = document.getElementById("labelContainer");
+            let input = document.getElementById("searchInput");
+            let button = document.getElementById("searchButton");
+    
+            if (input.style.display === "none") {
+                input.style.display = "block";
+                button.style.display = "block";
+                label.classList.remove("shrink"); // Kembalikan ukuran semula
+            } else {
+                input.style.display = "none";
+                button.style.display = "none";
+                label.classList.add("shrink"); // Kecilkan div
+            }
+        });
+    </script>
+</body>
+</html>

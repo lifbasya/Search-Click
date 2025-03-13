@@ -1,0 +1,83 @@
+body {
+    background-image: url(./image/background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Hilangkan margin default */
+    font-family: "Inter", sans-serif; 
+}
+
+.logo {
+    width: 150px;
+    margin-top: 170px;
+}
+
+.display {
+    text-align: center;
+}
+
+.display p {
+    margin-top: 60px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.label {
+    width: 100%;
+    max-width: 420px;
+    background-color: black;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Animasi perubahan */
+    margin: 0 auto; /* Memastikan div berada di tengah */
+}
+
+.label input {
+    background-color: black;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Inter", sans-serif; 
+    margin-right: 10px; /* Jarak antara input dan button */
+}
+
+.label button {
+    padding: 5px 12px;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    font-family: "Inter", sans-serif;
+    margin-right: 12px;
+}
+
+.label img {
+    cursor: pointer;
+}
+
+.label.shrink {
+    width: 50px; /* Mengecilkan div */
+    padding: 5px; /* Mengurangi padding */
+    justify-content: center;
+}
+
+.label.shrink input,
+.label.shrink button {
+    display: none; /* Menyembunyikan input dan button saat shrink */
+}
+
+input::placeholder {
+    color: rgb(190, 189, 189);
+    font-weight: 400;
+    font-size: 14px;
+}
